@@ -1,10 +1,16 @@
 import "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./Components/home";
+import LoginPage from "./Components/loginPage";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello this is my first practice app</h1>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact={true} component={Home} />
+        <Route path="/login" exact={true} component={LoginPage} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
